@@ -1,0 +1,13 @@
+prefix=/Users/anuragrachoti/PYTHON/venv
+exec_prefix=/Users/anuragrachoti/PYTHON/venv
+libdir=/Users/anuragrachoti/PYTHON/venv/lib
+sharedlibdir=/Users/anuragrachoti/PYTHON/venv/lib
+includedir=/Users/anuragrachoti/PYTHON/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}

@@ -1,0 +1,22 @@
+Hello world
+this is new line
+The query you provided aims to calculate the daily admissions and the cumulative difference between consecutive days. However, there are a few issues with the SQL syntax and logic. Here's the corrected query:
+
+sql
+Copy code
+SELECT
+    admission_date,
+    COUNT(*) AS admission_day,
+    COUNT(*) - LAG(COUNT(*)) OVER (ORDER BY admission_date) AS cumulative_difference
+FROM
+    admissions
+GROUP BY
+    admission_date
+ORDER BY
+    admission_date;
+Explanation:
+COUNT(*) counts the number of admissions for each admission_date.
+LAG(COUNT(*)) OVER (ORDER BY admission_date) calculates the count of admissions for the previous day.
+The difference is calculated as COUNT(*) - LAG(COUNT(*)).
+The query groups by admission_date and orders the results by admission_date.
+Ensure that the admissions table has an admission_date column with date values. This query will provide you with the count of admissions for each day and the difference in admissions compared to the previous day.

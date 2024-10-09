@@ -1,0 +1,6 @@
+hello welcome
+this is a course for AI engineering of autonomous systems
+there are lot to learn here 
+    1. sensor technology
+    2. sensor data fusion
+    3. machine learning perception and cognition.
